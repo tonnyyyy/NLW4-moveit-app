@@ -1,0 +1,30 @@
+/* ===== EXP BAR ===== */
+.expBar {
+  display: flex;
+  align-items: center;
+}
+
+.expBar span {
+  font-size: 1rem;
+}
+
+.expBar > div {
+  flex: 1;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--gray-line);
+  margin: 0 1.5rem;
+  position: relative;
+}
+
+.expBar > div > div {
+  height: 4px;
+  border-radius: 4px;
+  background: var(--green);
+}
+
+span.currentExp {
+  position: relative;
+  top: 10px;
+}
+/* /EXP BAR */
