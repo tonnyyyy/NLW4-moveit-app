@@ -17,7 +17,7 @@ export default function Home() {
       <h1 style={{ textAlign: "center", marginTop: "2rem" }}>BRONZE II</h1>
       <ExpBar />
 
-      <section>
+      <section style={{ gap: "6rem" }}>
         <div>
           <Profile />
           <CompletedChallenges />
