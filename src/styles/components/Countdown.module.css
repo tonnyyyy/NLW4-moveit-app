@@ -53,10 +53,9 @@
   transition: background-color 0.2s;
 }
 
-.countdownBtn:not(:disabled):hover {
-  /* ou [disabled] */
+/* .countdownBtn:not(:disabled):hover {
   background: var(--blue-dark);
-}
+} */
 
 .countdownBtnActive {
   background: var(--white);

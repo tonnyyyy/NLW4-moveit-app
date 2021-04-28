@@ -6,6 +6,7 @@ import { Countdown } from "../components/Countdown";
 import { ExpBar } from "../components/ExpBar";
 import { Profile } from "../components/Profile";
 import { ChallengesContext } from "../contexts/ChallengeContext";
+import { CountdownProvider } from "../contexts/CountdownContext";
 
 import styles from "../styles/pages/Home.module.css";
 
@@ -34,17 +35,18 @@ export default function Home() {
 
       <h1 style={{ textAlign: "center", marginTop: "2rem" }}>{patent}</h1>
       <ExpBar />
-
-      <section style={{ gap: "6rem" }}>
-        <div>
-          <Profile />
-          <CompletedChallenges />
-          <Countdown />
-        </div>
-        <div>
-          <ChallengeBox />
-        </div>
-      </section>
+      <CountdownProvider>
+        <section style={{ gap: "6rem" }}>
+          <div>
+            <Profile />
+            <CompletedChallenges />
+            <Countdown />
+          </div>
+          <div>
+            <ChallengeBox />
+          </div>
+        </section>
+      </CountdownProvider>
     </div>
   );
 }
