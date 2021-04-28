@@ -26,13 +26,15 @@ interface ChallengesProviderProps {
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
 export function ChallengesProvider({ children }: ChallengesProviderProps) {
-  const [level, setLevel] = useState(1);
+  const [level, setLevel] = useState(0);
   const [currentExp, setCurrentExp] = useState(0);
   const [challengesCompleted, setChallengesCompleted] = useState(0);
 
   const [activeChallenge, setActiveChallenge] = useState(null);
 
   const expToNextLvl = Math.pow((level + 1) * 4, 2);
+
+  const patent = "prata";
 
   function levelUp() {
     setLevel(level + 1);
@@ -62,8 +64,9 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     }
 
     setCurrentExp(finalExperience);
-    setActiveChallenge(null);
+    // setActiveChallenge(null);
     setChallengesCompleted(challengesCompleted + 1);
+    startNewChallenge();
   }
 
   return (
